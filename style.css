@@ -1,0 +1,118 @@
+:root{
+    --color-dark: #1A1A2E; 
+    --color-mid: #252841; 
+    --color-accent-teal: #00ADB5; 
+    --color-text-light: #EEEEEE;
+    --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+body{
+    font-family:var(--font-stack);
+    background-color: var(--color-dark);
+    color: var(--color-text-light);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+.container{
+    max-width :1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+h1,h2,h3{
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+h1{
+    font-size: 2.5rem;
+    color: var(--color-accent-sepia);
+}
+h2{
+    font-size: 2rem;
+    color: teal;
+    margin-bottom: 2rem;
+}
+p{
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+.header{
+    background-color: mistyrose;
+    box-shadow: 0 4px 12px rgba( 0,0,0,0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+.nav-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: teal;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.nav-links a{
+    color: var(--color-text-light);
+    text-decoration: none;
+    padding: 0.5rem 1 rem ;
+    margin-left: 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+.nav-links a:hover{
+    color: orange;
+    background-color:rgba(0, 173, 181, 0.1);
+}
+#menu-toggle{
+    display: none;
+}
+.menu-icon{
+    display: none;
+    cursor: pointer;
+    padding: 5px;
+}
+.menu-icon span{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--color-accent-teal);
+    margin: 5px 0;
+    border-radius: 2px;
+}
+.mobile-nav{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-mid);
+    border-top: 1px solid rgba(0, 173, 181, 0.2);
+    padding: 1rem 0;
+}
+.mobile-nav a{
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--color-text-light);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.mobile-nav a:last-child{
+    border-bottom: none;
+}
+.mobile-nav a:horver{
+    background-color:rgba(0, 173, 181, 0.15) ;
+    color: var(--color-accent-sepia);
+}
+#menu-toogle:checked ~.mobile-nav{
+    display: block;
+}

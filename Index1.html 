@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Photography Showcase</h1>
+        <p>Capturing moments</p>
+    </header>
+    <nav class="filter-menu">
+        <button class="active" onclick="filterphotos('all')">All</button>
+        <button onclick="filterphotos('nature')">Nature</button>
+        <button onclick="filterphotos('portrait')">Portrait</button>
+        <button onclick="filterphotos('urban')">Urban</button>
+    </nav>
+    <section class="gallery">
+        <div class="photo"><img src="nature 1.png" alt=""></div>
+        <div class="photo"><img src="portrait1.jpg" alt=""></div>
+        <div class="photo"><img src="urban1.jpg" alt=""></div>
+        <div class="photo"><img src="nature2.png" alt=""></div>
+        <div class="photo"><img src="portrait.jpg" alt=""></div>
+        <div class="photo"><img src="urban2.jpg" alt=""></div>
+    </section>
+    <footer>
+        <p>© 2025 Photography Showcase </p>
+    </footer>
+</body>
+</html>
