@@ -5,237 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="Stylesheet" href="style.css">
-    <!-- <style>
-        html{
-            scroll-behavior: smooth;
+    <style>
+        .mock-image img{
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-top: 8px;
         }
-
-        :root{
-    --color-dark: #1A1A2E; 
-    --color-mid: #252841; 
-    --color-accent-teal: #00ADB5; 
-    --color-text-light: #EEEEEE;
-    --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-*,*::before,*::after{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    transition: all 0.3s ease;
-}
-body{
-    font-family:var(--font-stack);
-    background-color: var(--color-dark);
-    color: var(--color-text-light);
-    line-height: 1.6;
-    min-height: 100vh;
-}
-.container{
-    max-width :1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
-h1,h2,h3{
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
-}
-h1{
-    font-size: 2.5rem;
-    color: var(--color-accent-sepia);
-}
-h2{
-    font-size: 2rem;
-    color: teal;
-    margin-bottom: 2rem;
-}
-p{
-    margin-bottom: 1rem;
-    color: #ccc;
-}
-.header{
-    background-color: mistyrose;
-    box-shadow: 0 4px 12px rgba( 0,0,0,0.4);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 1rem 0;
-}
-.nav-content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo{
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: teal;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-.nav-links a{
-    color: var(--color-text-light);
-    text-decoration: none;
-    padding: 0.5rem 1 rem ;
-    margin-left: 1rem;
-    border-radius: 4px;
-    font-weight: 500;
-}
-.nav-links a:hover{
-    color: orange;
-    background-color:rgba(0, 173, 181, 0.1);
-}
-#menu-toggle{
-    display: none;
-}
-.menu-icon{
-    display: none;
-    cursor: pointer;
-    padding: 5px;
-}
-.menu-icon span{
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: var(--color-accent-teal);
-    margin: 5px 0;
-    border-radius: 2px;
-}
-.mobile-nav{
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: var(--color-mid);
-    border-top: 1px solid rgba(0, 173, 181, 0.2);
-    padding: 1rem 0;
-}
-.mobile-nav a{
-    display: block;
-    padding: 0.75rem 1.5rem;
-    color: var(--color-text-light);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-.mobile-nav a:last-child{
-    border-bottom: none;
-}
-.mobile-nav a:horver{
-    background-color:rgba(0, 173, 181, 0.15) ;
-    color: var(--color-accent-sepia);
-}
-#menu-toogle:checked ~.mobile-nav{
-    display: block;
-}
-section{
-    padding: 4rem 0;
-}
-.hero{
-    text-align: center;
-    padding: 6rem 0 8rem;
-    background: radial-gradient(circle at center,#252841 0%, var(--color-dark) 70%);
-}
-.hero h1{
-    font-size: 3rem;
-}
-.hero p{
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 1rem auto 2rem;
-}
-.cta-button{
-    display: inline-block;
-    background-color: var(--color-accent-teal);
-    color: var(--color-dark);
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    box-shadow: 0 6px 15px rgba(0,173,181,0.3);
-    border: 2px solid transparent;
-}
-.cta-button:hover{
-    background-color: #008d93;
-    box-shadow: 0 8px 20px rgba(0, 173, 181, 0.6);
-    transform: translateY(-2px);
-}
-.content-grid{
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr;
-}
-.feature-card{
-    background-color: var(--color-mid);
-    padding: 2rem;
-    border-radius: 12px;
-    border-top: 5px solid var(--color-accent-sepia);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    text-align: center;
-}
-.featuree-card h3{
-    color: var(--color-accent-sepia);
-    margin-bottom: 1rem;
-}
-.featured-card p{
-    color: #c0c0c0;
-}
-.visual-placeholder{
-    background-color: #313353;
-    padding: 2rem;
-    border-radius: 12px;
-    text-align: center;
-    border: 2px dashed var(--color-accent-teal);
-    margin-top: 1.5rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
-    gap: 1rem;
-}
-.mock-image{
-    background-color:#4A4E69 ;
-    height: 100px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    font-size: 0.8rem;
-    color: #ccc;
-    opacity: 0.8rem;
-    box-shadow: inset 0 0 10px rgba( 0,0,0,0.5);
-}
-.visual-placeholder > p{
-    grid-column: 1 / -1;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--color-accent-teal);
-}
-.footer{
-    background-color: #11111D;
-    padding: 2rem 0;
-    text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.05);
-}
-.footer p{
-    margin: 0;
-    color:#888888;
-}
- @media (min-width: 1024px) {
-            h1 { font-size: 4rem; }
-        }
-        
-        /* Mobile-Specific Overrides */
-        @media (max-width: 767px) {
-            .nav-links {
-                display: none; /* Hide desktop nav */
-            }
-            .menu-icon {
-                display: block; /* Show mobile menu icon */
-            }
-        }
-
-    </style> -->
+    </style>
 </head>
 <body>
     <header class="header">
@@ -317,14 +95,14 @@ section{
                 <p class="text-center">A small selection from my recent collections, demonstrating technical skill and artistic range.</p>
                 <div class="visual-placeholder">
                     <p>The Art Gallery Placeholder</p>
-                    <div class="mock-image" style="height: 100px; width:107.27px;">Image 1: <img src="" alt=""></div>
-                    <div class="mock-image">Image 2: Landscape</div>
-                    <div class="mock-image">Image 3: Urban Scene</div>
-                    <div class="mock-image">Image 4: Abstract</div>
-                    <div class="mock-image">Image 5: Food/Product</div>
-                    <div class="mock-image">Image 6: Wedding Detail</div>
-                    <div class="mock-image">Image 7: B&W</div>
-                    <div class="mock-image">Image 8: Seascape</div>
+                    <div class="mock-image" > <img src="portrait.jpg" alt=""></div>
+                    <div class="mock-image"><img src="landscape.jpg"></div>
+                    <div class="mock-image"><img src="urban2.jpg"></div>
+                    <div class="mock-image"><img src="abstract .jpg"></div>
+                    <div class="mock-image"><img src="food.jpg"></div>
+                    <div class="mock-image"><img src="wedding.jpg" alt=""></div>
+                    <div class="mock-image"><img src="b&w.jpg"></div>
+                    <div class="mock-image"><img src="seescape.jpg"></div>
                     <h3 style="color: var(--color-accent-sepia); margin-top: 1 rem; grid-column: 1/ -1;">
                         Photography is the art of seeing
                     </h3>
