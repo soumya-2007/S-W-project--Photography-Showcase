@@ -46,7 +46,7 @@ p{
     color: #ccc;
 }
 .header{
-    background-color: mistyrose;
+    background-color:black;
     box-shadow: 0 4px 12px rgba( 0,0,0,0.4);
     position: sticky;
     top: 0;
@@ -58,6 +58,7 @@ p{
     justify-content: space-between;
     align-items: center;
     background-image: url(background.avif);
+    width: 1500px;
 }
 .logo{
     font-size: 1.8rem;
@@ -219,7 +220,7 @@ section{
             h1 { font-size: 4rem; }
         }
         
-        
+
         @media (max-width: 767px) {
             .nav-links {
                 display: none; 
