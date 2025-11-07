@@ -21,20 +21,22 @@ body{
     color: var(--color-text-light);
     line-height: 1.6;
     min-height: 100vh;
+    flex-wrap: wrap;
 }
 .container{
     max-width :1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
+
 }
 h1,h2,h3{
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 h1{
     font-size: 2.5rem;
-    color: var(--color-accent-sepia);
+    /* color: var(--color-accent-sepia); */
 }
 h2{
     font-size: 2rem;
@@ -54,11 +56,12 @@ p{
     padding: 1rem 0;
 }
 .nav-content{
+     max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url(background.avif);
-    width: 1500px;
 }
 .logo{
     font-size: 1.8rem;
@@ -128,8 +131,32 @@ section{
 .hero{
     text-align: center;
     padding: 6rem 0 8rem;
-    background: radial-gradient(circle at center,#252841 0%, var(--color-dark) 70%);
+     background-image: url(https://t4.ftcdn.net/jpg/00/97/06/73/360_F_97067358_KdcxBmC9uaTZQ6Za8L1hfZ04mTQlww07.jpg);
+      background-size: cover;           
+  background-repeat: no-repeat;     
+  background-position: center;     
+  height: 100vh;                    
+  color: white;                    
+  display: flex;                   
+  flex-direction: column;
+  justify-content: center;          
+  align-items: center; 
+     
 }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+.hero h1,
+.hero p,
+.hero a {
+  position: relative;
+  z-index: 1;
+}
+
 .hero h1{
     font-size: 3rem;
 }
@@ -158,7 +185,7 @@ section{
 .content-grid{
     display: grid;
     gap: 2rem;
-    grid-template-columns: 1fr;
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 .feature-card{
     background-color: var(--color-mid);
@@ -175,16 +202,63 @@ section{
 .featured-card p{
     color: #c0c0c0;
 }
-.visual-placeholder{
-    background-color: #313353;
-    padding: 2rem;
-    border-radius: 12px;
-    text-align: center;
-    border: 2px dashed var(--color-accent-teal);
-    margin-top: 1.5rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
-    gap: 1rem;
+.gallery-section {
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') 
+              no-repeat center center / cover;
+  padding: 4rem 2rem;
+  position: relative;
+  color: var(--color-text-light);
+}
+
+.gallery-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.gallery-section .container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  color: var(--color-accent-sepia);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-section p {
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(255, 179, 71, 0.6);
+}
+
+.gallery-quote {
+  margin-top: 2rem;
+  font-style: italic;
+  color: var(--color-accent-sepia);
+  font-size: 1.3rem;
 }
 .mock-image{
     background-color:#4A4E69 ;
@@ -199,13 +273,6 @@ section{
     box-shadow: inset 0 0 10px rgba( 0,0,0,0.5);
     gap: 2rem;
 }
-.visual-placeholder > p{
-    grid-column: 1 / -1;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--color-accent-teal);
-}
 .footer{
     background-color: #11111D;
     padding: 2rem 0;
@@ -215,6 +282,23 @@ section{
 .footer p{
     margin: 0;
     color:#888888;
+}
+#vision {
+  background-image: url("abstract.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  font-size: large;
+  
+}
+#vision::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
  @media (min-width: 1024px) {
             h1 { font-size: 4rem; }
@@ -229,3 +313,14 @@ section{
                 display: block; 
             }
         }
+@media (max-width: 767px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .gallery-section h2 {
+    font-size: 1.5rem;
+  }
+}
