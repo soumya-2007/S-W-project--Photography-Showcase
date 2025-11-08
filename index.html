@@ -135,9 +135,7 @@
     <h2 class="text-center">Ready to create?</h2>
     <p class="text-center" style="margin: 0 auto 2rem;">
         Let's discuss your next project — whether it's a private portrait session, a corporate assignment, or an inquiry about fine art prints.
-    </p>
-
-    <form class="contact-form" action="https://formspree.io/f/yourFormID" method="POST">
+ <form action="#thankyou" method="get" class="contact-form">
         <div>
             <label for="name">Full Name</label><br>
             <input type="text" id="name" name="name" placeholder="Your full name" required>
@@ -160,7 +158,12 @@
 
         <div class="text-center">
             <button type="submit" class="cta-button">Send Inquiry</button>
-        </div>
+             <div id="thankyou" class="thank-you-message">
+    <p>📩 Mail has been sent. Thank you!</p>
+    <a href="#" class="cta-button">Go Back</a>
+    </div>
+  </div>
+</div>
     </form>
 </div>
             </div>

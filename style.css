@@ -333,6 +333,16 @@ section{
 .contact-form label {
     font-weight: bold;
 }
+.thank-you-message {
+  display: none;
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: bold;
+  color: green;
+}
+:target.thank-you-message {
+  display: block;
+}
 @media (max-width: 767px) {
   .hero h1 {
     font-size: 2rem;
