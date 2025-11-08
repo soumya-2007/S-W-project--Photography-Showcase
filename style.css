@@ -313,6 +313,19 @@ section{
                 display: block; 
             }
         }
+/* .Inspiration{
+    background-image:url();
+    background-color: #121212;
+     background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  font-size: large;
+  
+
+} */
 @media (max-width: 767px) {
   .hero h1 {
     font-size: 2rem;
