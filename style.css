@@ -141,10 +141,10 @@ section{
   flex-direction: column;
   justify-content: center;          
   align-items: center; 
-     
+
 }
 .hero::before {
-  content: "";
+  content:"";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
@@ -326,7 +326,7 @@ section{
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 15px;
     font-size: 1rem;
 }
 
