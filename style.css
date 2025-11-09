@@ -36,7 +36,7 @@ h1,h2,h3{
 }
 h1{
     font-size: 2.5rem;
-    /* color: var(--color-accent-sepia); */
+
 }
 h2{
     font-size: 2rem;
@@ -131,16 +131,16 @@ section{
 .hero{
     text-align: center;
     padding: 6rem 0 8rem;
-     background-image: url(https://t4.ftcdn.net/jpg/00/97/06/73/360_F_97067358_KdcxBmC9uaTZQ6Za8L1hfZ04mTQlww07.jpg);
-      background-size: cover;           
-  background-repeat: no-repeat;     
-  background-position: center;     
-  height: 100vh;                    
-  color: white;                    
-  display: flex;                   
-  flex-direction: column;
-  justify-content: center;          
-  align-items: center; 
+    background-image: url(https://t4.ftcdn.net/jpg/00/97/06/73/360_F_97067358_KdcxBmC9uaTZQ6Za8L1hfZ04mTQlww07.jpg);
+    background-size: cover;           
+    background-repeat: no-repeat;     
+    background-position: center;     
+    height: 100vh;                    
+    color: white;                    
+    display: flex;                   
+    flex-direction: column;
+    justify-content: center;          
+    align-items: center; 
 
 }
 .hero::before {
